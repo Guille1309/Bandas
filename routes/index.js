@@ -1,9 +1,8 @@
 var express = require('express');
 var router = express.Router();
+const bandasController = require("../controllers/bandasController")
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
+
+router.get('/', bandasController.listadoBandas);
 
 module.exports = router;

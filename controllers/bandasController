@@ -1,0 +1,9 @@
+let bandas = require("../db/index")
+bandas= bandas.lista
+const bandasController = {
+    listadoBandas: function (req, res) {
+        res.res.render("index", {bandas: bandas})
+    }
+}
+
+module.exports = bandasController
