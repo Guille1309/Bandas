@@ -1,4 +1,4 @@
-const bandas= {lista:[
+let bandas= {lista:[
         {
             nombre: "AC/DC",
             integrantes: 5,

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Bandas</title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <h1>Detalle</h1>
+  <% if (bandaId == undefined) {%>
+    <p>No contamos con una banda que tenga ese ID. Pruebe de nuevo.</p>
+    <%} else {%>
+    <img src="<%= bandaId.cover%>" alt="Portada de la banda <%= bandaId.nombre%>">
+    <ul>
+        <li><b>Nombre: </b><%= bandaId.nombre %></li>
+        <li><b>Integrantes: </b><%= bandaId.integrantes %></li>
+        <li><b>Género: </b> <%= bandaId.genero %></li>
+        <li><b>Top canciones: </b><%= bandaId.topCanciones %></li>
+        <li><b>Id: </b><%= bandaId.id %></li>
+        <li><iframe src="<%= bandaId.video %>" frameborder="0"></iframe></li>
+   
+    </ul>
+    <% } %>
+</body>
+
+</html>

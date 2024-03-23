@@ -7,17 +7,14 @@ const bandasController = {
     },
     detalleBanda: function (req, res) {
         let idRecibido = req.params.id;
-        for (let i = 0; i < array.length; i++) {
+        let bandaId 
+        for (let i = 0; i < bandas.length; i++) {
             let idBanda = bandas[i].id;
             if (idRecibido == idBanda){
-                let bandaId = bandas[i];
-                res.render('index', {bandaId: bandaId})
-        if (bandaId == undefined) {
-            let mensajeDetalle = 'No contamos con una banda que tenga ese ID. Pruebe de nuevo.'
-            res.render('index', {mensajeDetalle: mensajeDetalle})
-        }
-            };           
+                bandaId = bandas[i];
+            }
         };
+        res.render('detalleBanda', {bandaId: bandaId})                   
     }
 };
 
