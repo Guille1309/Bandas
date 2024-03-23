@@ -11,11 +11,6 @@
   <%for (let i=0; i < bandas.length; i++) { %>
     <h2><%=bandas[i].nombre %></h2>
     <img src="<%= bandas[i].cover%>" alt="Portada de la banda <%=bandas[i].nombre%>">
-    <h3> Genero: <%= bandas[i].genero%></h3>
-    <ul>
-        <li> Cantidad de Integrantes: <%bandas[i].integrantes%></li>
-        <li> Top de Canciones: <%bandas[i].topCanciones%></li>
-    </ul>
     <%}%>
 </body>
 
