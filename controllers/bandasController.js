@@ -15,7 +15,26 @@ const bandasController = {
             }
         };
         res.render('detalleBanda', {bandaId: bandaId})                   
-    }
-};
+    },
+    generoBanda: function (req, res) {
+        let idGenero = req.params.id;
+        let generos = {} 
+        for (let i = 0; i < bandas.length; i++) {
+            if (bandas[i].genero != generos){
+                generos.bandas[i].genero;
+            }
+            else {
+                break
+            }
+        };
+        for (let i = 0; i < bandas.length; i++) {
+            if (idObtenido == bandas[i].genero){
+                generos.idGenero = bandas[i];
+            }
+        };
+
+        res.render('porGenero', {generos: generos})
+}
+}
 
 module.exports = bandasController
