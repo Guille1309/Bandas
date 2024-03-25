@@ -20,7 +20,7 @@ const bandasController = {
         let idGenero = req.params.id;
         let generos = [];
         for (let i = 0; i < bandas.length; i++) {
-            if (bandas[i].genero != generos){
+            if (idGenero == bandas[i].genero){
                 generos.push(bandas[i]);
             }
             else {
@@ -28,7 +28,7 @@ const bandasController = {
             }
         };
         
-        res.render('porGenero', {generos: generos})
+        res.render('porGenero', {generos})
 }
 }
 

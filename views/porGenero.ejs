@@ -8,25 +8,13 @@
 
 <body>
   <h1>Generos</h1>
-  <% if (idGenero == undefined) {%>
-    <p>No contamos con bandas de dicho género. Pruebe de nuevo.</p>
-    <%} else {%>
-        <% for(let i = 0; i < generos.length; i++) { %>
-            <ul> 
-                <li> <%= generos[i]%> </li>    
-            </ul>
-        <% } %>
-
-    <% } %>
-
-    <% if (idGenero == undefined) {%>
+    <% if (generos == []) {%>
         <p>No contamos con bandas de dicho género. Pruebe de nuevo.</p>
         <%} else {%>
             <% for(let i = 0; i < generos.length; i++) { %>
                 <ul> 
-                    <li> <% for(let i = 0; i < generos[i].length; i++) { %> 
-                        <li> <a href="./detalleBanda.ejs"> <%= generos[i].[i]%>  </a> </li>
-                        <% } %>
+                    <li> 
+                        <a href="./detalleBanda.ejs"> <%= generos[i]%>  </a> 
                     </li>    
                 </ul>
             <% } %>
