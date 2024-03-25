@@ -11,7 +11,7 @@
   <% if (bandaId == undefined) {%>
     <p>No contamos con una banda que tenga ese ID. Pruebe de nuevo.</p>
     <%} else {%>
-    <img src="<%= bandaId.cover%>" alt="Portada de la banda <%= bandaId.nombre%>">
+    <img src="/<%= bandaId.cover%>" alt="Portada de la banda <%= bandaId.nombre%>">
     <ul>
         <li><b>Nombre: </b><%= bandaId.nombre %></li>
         <li><b>Integrantes: </b><%= bandaId.integrantes %></li>
