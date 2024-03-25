@@ -7,7 +7,7 @@ const bandasController = {
     },
     detalleBanda: function (req, res) {
         let idRecibido = req.params.id;
-        let bandaId 
+        let bandaId;
         for (let i = 0; i < bandas.length; i++) {
             let idBanda = bandas[i].id;
             if (idRecibido == idBanda){
